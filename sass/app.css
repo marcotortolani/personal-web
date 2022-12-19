@@ -117,7 +117,7 @@ body .rrss-contact .rs .tag-icon {
   display: flex;
   align-items: center;
   position: relative;
-  background-color: rgba(39, 57, 79, 0.7882352941);
+  background-color: rgba(39, 57, 79, 0.8196078431);
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -280,7 +280,7 @@ body .main .sub-title {
     min-width: 220px;
     padding: 10px 5px;
     padding-left: 20px;
-    background-color: rgba(39, 57, 79, 0.7882352941);
+    background-color: rgba(39, 57, 79, 0.8196078431);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
