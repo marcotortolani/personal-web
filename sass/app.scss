@@ -220,6 +220,46 @@ body {
             text-align: center;
         }
     }
+
+
+    footer{
+        width: 100vw;
+        height: 60px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 20px;
+        //align-items: flex-start;
+    
+        //background-color: $colorBackTitle;
+        //background-color: $colorMagenta;
+        //background-color: $colorBackHome;
+        //background-color: $colorBack;
+        //background-color: #25d366;
+    
+        h6{
+            margin: 20px;
+            //font-family: $fontCredits;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: none;
+            letter-spacing: 1.5px;
+            //color: $colorMagenta;
+            //color: $colorText;
+            a{
+                text-decoration: none;
+            }
+            span{
+                font-weight: 500;
+                color: aqua;
+                //color: $colorCyan;
+            }
+        }
+    }
+    
 }
 
 

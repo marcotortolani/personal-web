@@ -193,6 +193,30 @@ body .main .sub-title {
   padding: 1rem 4rem;
   text-align: center;
 }
+body footer {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+}
+body footer h6 {
+  margin: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: none;
+  letter-spacing: 1.5px;
+}
+body footer h6 a {
+  text-decoration: none;
+}
+body footer h6 span {
+  font-weight: 500;
+  color: aqua;
+}
 
 /* CSS hack using multiple box-shadows to get them **Stars** */
 .stars {
