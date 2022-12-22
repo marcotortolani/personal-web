@@ -213,12 +213,20 @@ body {
             border-width: 60vw;
             border-bottom: 2px solid;            
         }
-        
-        .sub-title {
-            //border-top: .1rem solid #fff;
-            padding: 1rem 4rem;
+
+        .sub-title{
+            width: 60vw;
+            max-width: 500px;
+            font-size: 2.5rem;
             text-align: center;
         }
+        
+        // .sub-title {
+        //     //margin-top: 5vh;
+        //     //border-top: .1rem solid #fff;
+        //     padding: 1rem 4rem;
+        //     text-align: center;
+        // }
     }
 
 

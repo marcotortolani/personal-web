@@ -190,7 +190,9 @@ body .main .title {
   border-bottom: 2px solid;
 }
 body .main .sub-title {
-  padding: 1rem 4rem;
+  width: 60vw;
+  max-width: 500px;
+  font-size: 2.5rem;
   text-align: center;
 }
 body footer {
