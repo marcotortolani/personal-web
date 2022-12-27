@@ -443,7 +443,7 @@ body {
     font-size: 1.6rem;
   }
   .blog main .note p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 455px) {
@@ -464,11 +464,8 @@ body {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
   }
-  .blog main .note .note-title {
-    font-size: 1.5rem;
-  }
   .blog main .note p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 355px) {
