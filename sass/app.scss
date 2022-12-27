@@ -212,8 +212,9 @@ body {
             margin-bottom: .5rem;
 
             font-family: 'Poiret One', cursive;
+            font-family: "Ubuntu";
             font-size: 4rem;
-            font-weight: 900;
+            font-weight: 500;
             //text-transform: uppercase;
             text-align: center;
             //text-decoration: underline;
@@ -226,6 +227,7 @@ body {
             width: 60vw;
             max-width: 500px;
             font-size: 2.5rem;
+            font-weight: 100;
             text-align: center;
         }
         
@@ -639,9 +641,7 @@ body {
         main{
 
             .note{
-                .note-title{
-                    //font-size: 1.5rem;
-                }
+                
                 p{
                     font-size: 1.2rem;
                 }
