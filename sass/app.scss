@@ -49,7 +49,7 @@ body {
 
 body {
 	//font-size: 110%;
-	color: #ecf0f1;
+	//color: #ecf0f1;
 	font-family: 'Source Sans Pro', sans-serif;
 	
 	width: 100%;
@@ -64,6 +64,7 @@ body {
 
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow: hidden;
+    color: rgb(240, 240, 240);
 
     .rrss-contact{
         z-index: 100;
@@ -368,6 +369,8 @@ body {
             font-family: Ubuntu;
             font-size: 4em;
             text-align: center;
+
+            color: rgb(240, 240, 240);
         }
 
         .note{
@@ -401,6 +404,11 @@ body {
                     font-family: 'Courier New', Courier, monospace;
                     font-size: 1.8rem;
                     font-weight: 900;
+                    
+                    color: rgb(240, 240, 240);
+                    color: aqua;
+                    color: rgb(206, 242, 74);
+                    
                 }
 
                 img{
@@ -418,6 +426,8 @@ body {
                 font-family: Ubuntu;
                 font-size: 2rem;
                 text-transform: uppercase;
+
+                color: rgb(240, 240, 240);
                 //text-align: center;
                 //text-align: start;
 
@@ -426,12 +436,18 @@ body {
             }
             .note-date-post{
                 margin: 10px;
+
+                color: rgb(240, 240, 240);
+                color: aqua;
+                color: magenta;
+                color: rgb(206, 242, 74);
             }
 
             p{
                 width: 100%;
                 margin: 10px;
                 font-size: 1.5rem;
+                color: rgb(240, 240, 240);
             }
 
 
