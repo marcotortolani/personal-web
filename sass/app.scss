@@ -398,7 +398,7 @@ body {
 
                 .note-number{
                 
-                    //right: 150px;
+                    font-family: 'Courier New', Courier, monospace;
                     font-size: 1.8rem;
                     font-weight: 900;
                 }
@@ -526,6 +526,26 @@ body {
 
 // ----------------- MEDIA QUERIES -----------------------
 
+@media screen and (max-width: 1025px ) {
+
+    .blog{
+        
+        main{
+            .note{
+
+                .note-title{
+                    font-size: 1.8rem;
+                }
+                p{
+                    font-size: 1.3rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}
+
 @media screen and (max-width: 975px ) {
 
     .blog{
@@ -549,6 +569,14 @@ body {
 
                 .number-icon{
                     bottom: 10px;
+                }
+
+                .note-title{
+                    font-size: 1.6rem;
+                }
+
+                p{
+                    font-size: 1.1rem;
                 }
             }
         }
@@ -588,6 +616,22 @@ body {
             }
         }
     }
+
+    .blog{
+        
+        main{
+
+            .note{
+                .note-title{
+                    font-size: 1.5rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    
 }
 
 

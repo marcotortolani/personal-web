@@ -312,6 +312,7 @@ body {
   align-items: center;
 }
 .blog main .note .number-icon .note-number {
+  font-family: "Courier New", Courier, monospace;
   font-size: 1.8rem;
   font-weight: 900;
 }
@@ -414,6 +415,15 @@ body {
     transform: translateY(-2000px);
   }
 }
+@media screen and (max-width: 1025px) {
+  .blog main .note .note-title {
+    font-size: 1.8rem;
+  }
+  .blog main .note p {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 975px) {
   .blog main {
     width: 80vw;
@@ -428,6 +438,12 @@ body {
   }
   .blog main .note .number-icon {
     bottom: 10px;
+  }
+  .blog main .note .note-title {
+    font-size: 1.6rem;
+  }
+  .blog main .note p {
+    font-size: 1.1rem;
   }
 }
 @media screen and (max-width: 455px) {
@@ -447,6 +463,12 @@ body {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+  }
+  .blog main .note .note-title {
+    font-size: 1.5rem;
+  }
+  .blog main .note p {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 355px) {
