@@ -295,7 +295,7 @@ body {
   padding: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   background-color: rgba(39, 57, 79, 0.5568627451);
   border-radius: 60px;
   -webkit-border-radius: 60px;
@@ -326,13 +326,13 @@ body {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
+  margin-left: 10px;
   font-family: Ubuntu;
   font-size: 2rem;
   text-transform: uppercase;
-  text-align: center;
 }
 .blog main .note .note-date-post {
-  margin: 10px 0;
+  margin: 10px;
 }
 .blog main .note p {
   width: 100%;
@@ -421,7 +421,6 @@ body {
   }
   .blog main .note p {
     font-size: 1.3rem;
-    text-align: center;
   }
 }
 @media screen and (max-width: 975px) {

@@ -382,7 +382,7 @@ body {
 
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
 
             background-color: #27394f8e;
 
@@ -414,17 +414,18 @@ body {
             .note-title{
                 width: 100%;
                 max-width: fit-content;
+                margin-left: 10px;
                 font-family: Ubuntu;
                 font-size: 2rem;
                 text-transform: uppercase;
-                text-align: center;
+                //text-align: center;
                 //text-align: start;
 
                 //background-color: brown;
             
             }
             .note-date-post{
-                margin: 10px 0;
+                margin: 10px;
             }
 
             p{
@@ -538,7 +539,7 @@ body {
                 }
                 p{
                     font-size: 1.3rem;
-                    text-align: center;
+                    //text-align: center;
                 }
             }
         }
