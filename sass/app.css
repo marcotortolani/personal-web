@@ -64,20 +64,22 @@ body {
 }
 
 body {
-  font-size: 110%;
   color: #ecf0f1;
   font-family: "Source Sans Pro", sans-serif;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.home {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
 }
-body .rrss-contact {
+.home .rrss-contact {
   z-index: 100;
   width: 50px;
-  height: 300px;
+  height: 350px;
   position: fixed;
   top: 100px;
   display: flex;
@@ -89,25 +91,24 @@ body .rrss-contact {
   border-bottom-right-radius: 20px;
   background-color: rgba(39, 57, 79, 0.7882352941);
 }
-body .rrss-contact .rs {
+.home .rrss-contact .rs {
   display: flex;
   align-items: center;
   position: relative;
   left: 10px;
 }
-body .rrss-contact .rs .icon {
+.home .rrss-contact .rs .icon {
   width: 30px;
   height: 30px;
-  /* background-color: darkgray; */
 }
-body .rrss-contact .rs .icon img {
+.home .rrss-contact .rs .icon img {
   width: 100%;
   height: 100%;
 }
-body .rrss-contact .rs .icon:hover {
+.home .rrss-contact .rs .icon:hover {
   cursor: pointer;
 }
-body .rrss-contact .rs .tag-icon {
+.home .rrss-contact .rs .tag-icon {
   z-index: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -124,28 +125,28 @@ body .rrss-contact .rs .tag-icon {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
-body .rrss-contact .rs .tag-icon h5 {
+.home .rrss-contact .rs .tag-icon h5 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   padding: 0 5px;
   font-family: "Courier New", Courier, monospace;
 }
-body .rrss-contact .rs .tag-icon h5:hover {
+.home .rrss-contact .rs .tag-icon h5:hover {
   cursor: default;
 }
-body .rrss-contact .rs .hide {
+.home .rrss-contact .rs .hide {
   display: none;
 }
-body .rrss-contact .rs .show-tag {
+.home .rrss-contact .rs .show-tag {
   animation: showTag 500ms ease 0s 1 normal forwards;
   -webkit-animation: showTag 500ms ease 0s 1 normal forwards;
 }
-body .rrss-contact .rs .hide-tag {
+.home .rrss-contact .rs .hide-tag {
   animation: hideTag 500ms ease 0s 1 reverse forwards;
   -webkit-animation: hideTag 500ms ease 0s 1 reverse forwards;
 }
-body .astronaut {
+.home .astronaut {
   z-index: 10;
   width: 50vw;
   min-width: 220px;
@@ -161,7 +162,7 @@ body .astronaut {
   -ms-transform: scale(2);
   -o-transform: scale(2);
 }
-body .main {
+.home .main {
   z-index: 50;
   position: absolute;
   height: 100%;
@@ -170,13 +171,13 @@ body .main {
   justify-content: center;
   align-items: center;
 }
-body .main .contact {
+.home .main .contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-body .main .title {
+.home .main .title {
   width: 60vw;
   min-width: 200px;
   max-width: 600px;
@@ -189,13 +190,13 @@ body .main .title {
   border-width: 60vw;
   border-bottom: 2px solid;
 }
-body .main .sub-title {
+.home .main .sub-title {
   width: 60vw;
   max-width: 500px;
   font-size: 2.5rem;
   text-align: center;
 }
-body footer {
+.home footer {
   width: 100vw;
   height: 60px;
   display: flex;
@@ -204,7 +205,7 @@ body footer {
   position: absolute;
   bottom: 20px;
 }
-body footer h6 {
+.home footer h6 {
   margin: 20px;
   font-family: "Courier New", Courier, monospace;
   font-weight: 600;
@@ -212,12 +213,130 @@ body footer h6 {
   text-transform: none;
   letter-spacing: 1.5px;
 }
-body footer h6 a {
+.home footer h6 a {
   text-decoration: none;
 }
-body footer h6 span {
+.home footer h6 span {
   font-weight: 500;
   color: aqua;
+}
+
+.blog {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1b2735;
+  background-color: #090a0f;
+}
+.blog header {
+  z-index: 100;
+  width: 95vw;
+  height: 50px;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  justify-content: space-between;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #27394f;
+}
+.blog header .logo {
+  height: 100%;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blog header .logo img {
+  height: 40px;
+}
+.blog header ol {
+  margin: 0 50px;
+}
+.blog header ol li {
+  margin: 0 20px;
+  list-style: none;
+}
+.blog header ol li a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #FFF;
+}
+.blog .stars-background {
+  position: absolute;
+  left: 0;
+}
+.blog main {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blog main .blog-title {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px;
+  font-family: Ubuntu;
+  font-size: 4em;
+  text-align: center;
+}
+.blog main .note {
+  z-index: 50;
+  width: 100%;
+  min-width: 250px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 20px 0;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(39, 57, 79, 0.5568627451);
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+}
+.blog main .note .number-icon {
+  width: 100%;
+  margin: 0 10px;
+  position: relative;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+.blog main .note .number-icon .note-number {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+.blog main .note .number-icon img {
+  width: 25px;
+  height: 25px;
+  margin: 0 20px;
+}
+.blog main .note .note-title {
+  width: 100%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-family: Ubuntu;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.blog main .note .note-date-post {
+  margin: 10px 0;
+}
+.blog main .note p {
+  width: 100%;
+  margin: 10px;
+  font-size: 1.5rem;
 }
 
 /* CSS hack using multiple box-shadows to get them **Stars** */
@@ -295,11 +414,27 @@ body footer h6 span {
     transform: translateY(-2000px);
   }
 }
+@media screen and (max-width: 975px) {
+  .blog main {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 610px) {
+  .blog main {
+    width: 90vw;
+  }
+  .blog main .note {
+    padding: 25px;
+  }
+  .blog main .note .number-icon {
+    bottom: 10px;
+  }
+}
 @media screen and (max-width: 455px) {
-  body .rrss-contact .rs .tag-icon {
+  .home .rrss-contact .rs .tag-icon {
     background-color: unset;
   }
-  body .rrss-contact .rs .tag-icon h5 {
+  .home .rrss-contact .rs .tag-icon h5 {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -315,7 +450,7 @@ body footer h6 span {
   }
 }
 @media screen and (max-width: 355px) {
-  body .main .title {
+  .home .main .title {
     font-size: 3rem;
     border-width: 40vw;
     border-bottom: 2px solid;

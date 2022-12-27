@@ -48,22 +48,27 @@ body {
 }
 
 body {
-	font-size: 110%;
+	//font-size: 110%;
 	color: #ecf0f1;
 	font-family: 'Source Sans Pro', sans-serif;
-	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+	
 	width: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
-	overflow: hidden;
+	
+}
 
 
+.home{
+
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
 
     .rrss-contact{
         z-index: 100;
         width: 50px;
-        height: 300px;
+        height: 350px;
         position: fixed;
         top: 100px;
         display: flex;
@@ -92,17 +97,19 @@ body {
                 width: 30px;
                 height: 30px;
             
-                /* background-color: darkgray; */
+                //background-color: darkgray;
     
                 img{
                     width: 100%;
                     height: 100%;
-                }
+                    
+}
                 
                 &:hover{
                     cursor: pointer;
                 }
-            }
+                
+}
     
             .tag-icon{
                 z-index: 1;
@@ -268,9 +275,175 @@ body {
             }
         }
     }
-    
 }
 
+.blog{
+
+    //width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //background-color: rgb(0, 0, 48);
+    //background: radial-gradient(ellipse at top, #1b2735 100%, #090a0f 80%);
+    background-color: #1b2735;
+    background-color: #090a0f;
+
+    header{
+
+        z-index: 100;
+        width: 95vw;
+
+        height: 50px;
+        position: fixed;
+        top: 0px;
+        display: flex;
+        //flex-direction: column;
+        align-items: center;
+        //align-items: flex-start;
+        justify-content: space-around;
+        justify-content: space-between;
+    
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    
+    
+        //background-color: #27394f;
+        background-color: #27394f;
+
+        .logo{
+            height: 100%;
+            margin: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                //width: 80px;
+                height: 40px;
+            }
+        }
+
+        ol{
+            margin: 0 50px;
+            //display: flex;
+            //flex-direction: row;
+
+            li{
+                margin: 0 20px;
+                list-style: none;
+
+                a{
+                    //font-family: "Source";
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    text-decoration: none;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+
+    .stars-background{
+        //display: none;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        position: absolute;
+        left: 0;
+    }
+    main{
+        
+        width: 70vw;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .blog-title{
+            width: 100%;
+            max-width: 600px;
+            margin: 50px;
+
+            font-family: Ubuntu;
+            font-size: 4em;
+            text-align: center;
+        }
+
+        .note{
+            z-index: 50;
+            width: 100%;
+            min-width: 250px;
+            height: fit-content;
+
+            margin: 20px 0;
+
+            padding: 50px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            background-color: #27394f8e;
+
+
+            .number-icon{
+                width: 100%;
+                margin: 0 10px;
+                position: relative;
+                bottom: 30px;
+
+                display: flex;
+                align-items: center;
+
+                .note-number{
+                
+                    //right: 150px;
+                    font-size: 1.8rem;
+                    font-weight: 900;
+                }
+
+                img{
+                    width: 25px;
+                    height: 25px;
+                    margin: 0 20px;
+                }
+            }
+            
+
+            .note-title{
+                width: 100%;
+                max-width: fit-content;
+                font-family: Ubuntu;
+                font-size: 2rem;
+                text-transform: uppercase;
+                text-align: center;
+                //text-align: start;
+
+                //background-color: brown;
+            
+            }
+            .note-date-post{
+                margin: 10px 0;
+            }
+
+            p{
+                width: 100%;
+                margin: 10px;
+                font-size: 1.5rem;
+            }
+
+
+
+
+            border-radius: 60px;
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            -ms-border-radius: 60px;
+            -o-border-radius: 60px;
+}
+    }
+}
 
 
 
@@ -353,10 +526,40 @@ body {
 
 // ----------------- MEDIA QUERIES -----------------------
 
+@media screen and (max-width: 975px ) {
+
+    .blog{
+        
+        main{
+            width: 80vw;
+        }
+    }
+
+}
+
+@media screen and (max-width: 610px ) {
+
+    .blog{
+        
+        main{
+            width: 90vw;
+
+            .note{
+                padding: 25px;
+
+                .number-icon{
+                    bottom: 10px;
+                }
+            }
+        }
+    }
+
+}
+
 
 @media screen and (max-width: 455px ) {
     
-    body{
+    .home{
         .rrss-contact{
             .rs{
                 .tag-icon{
@@ -390,7 +593,7 @@ body {
 
 @media screen and (max-width: 355px ) {
     
-    body{
+    .home{
         .main{
             .title{
                 font-size: 3rem;
