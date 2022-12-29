@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torto</title>
-    <meta name="description" content="Personal Web Site to show my frontend skills and more about me.">
+    <title>Marco Tortolani - Front End Developer</title>
+    <!-- <meta name="description" content="Personal Web Site to show my frontend skills and more about me."> -->
+    <meta name="description" content="Soy desarrollador web, específicamente Front End. Apasionado por el diseño y la tecnología. Desarrollo soluciones pensando siempre en las personas y sus necesidades.">
     <meta name="author" content="Marco Tortolani">
     <meta name="copyright" content="mtorto.com">
     <meta name="robots" content="index, follow">
@@ -48,38 +49,37 @@
 
         <h1 class="blog-title">Blog</h1>
 
-        <div class="note">
+
+        <div class="posts-blog" id="posts-blog"></div>
+
+        <div class="post collapsed hide" id="post-template">
             <div class="number-icon">
-                <h5 class="note-number">#1</h5>
-                <img src="../imgs/icon-pencil.png" alt="">
+                <h5 class="post-number">#<span class="id-post" id="id-post">000</span></h5>
             </div>
-            
-
-            <h2 class="note-title">Aprender es desafiarse a superar la frustración</h2>    
-            
-            <h4 class="note-date-post">
-                <span class="date-post">- 27/12/2022</span> - <span class="date-since"></span>
+            <h2 class="post-title" id="title-post">Cargando título...</h2>    
+            <h4 class="post-date-post">
+                <span class="date-post" id="date-post">01/01/2023</span> 
+                - <span class="date-since" id="date-since">02/02/2000</span>
             </h4>
+            <p id="paragraphs-post">Cargando texto...</p>
 
-            <p>Algo que me está sucediendo mucho al ser programador es pasar el ciclo de aprendizaje de forma mucho más periódica. Pongo contexto, antes de decidir meterme en el mundo developer estaba haciendo la carrera de Diseño Industrial, y como en todo estudio académico hay un plan de estudios donde los procesos de aprendizaje son más amplios y también con un ritmo más lento, esto no es que esté bien o mal, simplemente es así, en una carrera para formar a un profesional es necesario abarcar muchos temas y eso lleva tiempo. En cambio, al entrar en el desarrollo Front End empecé a aprender un primer lenguaje (HTML) y luego otro (CSS), poniéndolos en práctica casi al unísono para empezar a maquetar unas primeras páginas de aprendizaje, y al poco tiempo ya aprendiendo un lenguaje de programación (JavaScript) para hacer desarrollos más dinámicos y modernos, y después otra herramienta, y así constantemente mejorando.</p>
-            <p>Todo ciclo de aprendizaje (sea del tema que sea) tiene etapas, y una muy importante es la frustración, puede que la superes fácil, que te resulte difícil o que no la superes en absoluto y desistas, pero la frustración siempre está presente en el aprendizaje, porque aprender es hacer propio algo que desconocemos, algo que no entendemos en su totalidad pero que deseamos comprender y dominar, y cuando no podemos entenderlo eso nos puede frustrar, pero la diferencia radica absolutamente en una sola cosa, la actitud, el deseo interno de sobreponerse, superarlo y buscar la forma de aprender eso que se desea.</p>
-            <p>Aprender es desafiarse a uno mismo a lograr superar esa frustración, el aprendizaje se encuentra del otro lado del muro de la frustración, el aprendizaje es la iluminación de tu corteza cerebral cuando hizo todas las conexiones necesarias para que puedas decir “Eureka!!!”. En este ámbito de la programación es muy común la necesidad de ser habidos en aprender nuevas tecnologías y herramientas, todo avanza, todo evoluciona y se transforma, y por esto estamos en constante proceso en el ciclo de aprendizaje y superando la frustración que cada vez se hace más fácil de superar, es como un entrenamiento.</p>
-            <p>En mi caso lo que me motiva fuertemente por aprender una nueva herramienta son las habilidades que luego voy a poder volcar en pos de mejorar mi desarrollo, en mejorar la calidad de lo que hago para una persona que va a usar ese desarrollo y que tenga una mejor experiencia de usuario. Esa motivación me lleva a seguir enfrentando ese muro de frustración, haciéndolo cada vez más pequeño y más fácil de superar, es el desafío constante de empujar los límites del conocimiento.</p>            
-            <p>Por eso si estás pensando en desistir, no lo decidas aún, tomate un respiro, cambia el aire, dale un descanso a tu cabeza haciendo una actividad totalmente distinta, tomá distancia del problema, luego volvé y pensá en CÓMO PODÉS SUPERARLO. Con el tiempo te va a ir resultando más fácil.</p>
+            <button class="button-more" id="button-more">Leer post</button>
         </div>
 
-
-
-        
     </main>
 
 
 
 
     <footer>
-
+        <h6>Copyright <span>&#169</span> | Designed and Developed by 
+            <a href="https://www.mtorto.com/" target="_blank">
+                <span>Marco Tortolani</span>
+            </a>
+        </h6>
+        <h6>v1.1 - 2022</h6>
     </footer>
 
-    <script src=""></script>
+    <script src="../script.js"></script>
 </body>
 </html>

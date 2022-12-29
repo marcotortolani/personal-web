@@ -63,12 +63,41 @@ body {
   height: 100%;
 }
 
-body {
+.home,
+.blog {
   font-family: "Source Sans Pro", sans-serif;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+}
+.home footer,
+.blog footer {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+}
+.home footer h6,
+.blog footer h6 {
+  margin: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: none;
+  letter-spacing: 1.5px;
+}
+.home footer h6 a,
+.blog footer h6 a {
+  text-decoration: none;
+}
+.home footer h6 span,
+.blog footer h6 span {
+  font-weight: 500;
+  color: aqua;
 }
 
 .home {
@@ -198,34 +227,10 @@ body {
   font-weight: 100;
   text-align: center;
 }
-.home footer {
-  width: 100vw;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 20px;
-}
-.home footer h6 {
-  margin: 20px;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 600;
-  font-size: 0.85rem;
-  text-transform: none;
-  letter-spacing: 1.5px;
-}
-.home footer h6 a {
-  text-decoration: none;
-}
-.home footer h6 span {
-  font-weight: 500;
-  color: aqua;
-}
 
 .blog {
   overflow-y: auto;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -288,7 +293,7 @@ body {
   text-align: center;
   color: rgb(240, 240, 240);
 }
-.blog main .note {
+.blog main .post {
   z-index: 50;
   width: 100%;
   min-width: 250px;
@@ -307,7 +312,7 @@ body {
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
 }
-.blog main .note .number-icon {
+.blog main .post .number-icon {
   width: 100%;
   margin: 0 10px;
   position: relative;
@@ -315,20 +320,32 @@ body {
   display: flex;
   align-items: center;
 }
-.blog main .note .number-icon .note-number {
+.blog main .post .number-icon .post-number {
+  width: 65px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: 40px;
+  padding: 2px 10px;
   font-family: "Courier New", Courier, monospace;
   font-size: 1.8rem;
   font-weight: 900;
+  border: 2px solid;
   color: rgb(240, 240, 240);
   color: aqua;
   color: rgb(206, 242, 74);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
-.blog main .note .number-icon img {
+.blog main .post .number-icon img {
   width: 25px;
   height: 25px;
   margin: 0 20px;
 }
-.blog main .note .note-title {
+.blog main .post .post-title {
   width: 100%;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -339,18 +356,59 @@ body {
   text-transform: uppercase;
   color: rgb(240, 240, 240);
 }
-.blog main .note .note-date-post {
+.blog main .post .post-date-post {
   margin: 10px;
   color: rgb(240, 240, 240);
   color: aqua;
   color: magenta;
   color: rgb(206, 242, 74);
 }
-.blog main .note p {
+.blog main .post p {
   width: 100%;
   margin: 10px;
   font-size: 1.5rem;
   color: rgb(240, 240, 240);
+}
+.blog main .post .button-more {
+  z-index: 100;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 40px;
+  padding: 0 10px;
+  position: relative;
+  left: 50vw;
+  top: 10px;
+  font-family: Ubuntu;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(206, 242, 74);
+  background-color: rgba(9, 10, 15, 0);
+  border: 2px solid;
+}
+.blog main .post .button-more:hover {
+  cursor: pointer;
+  background-color: #27394f;
+}
+.blog main .post .button-more:active {
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+}
+.blog main .post .button-more {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.blog main .collapsed p {
+  display: none;
+}
+.blog main .hide {
+  display: none;
 }
 
 /* CSS hack using multiple box-shadows to get them **Stars** */
@@ -429,10 +487,10 @@ body {
   }
 }
 @media screen and (max-width: 1025px) {
-  .blog main .note .note-title {
+  .blog main .post .post-title {
     font-size: 1.8rem;
   }
-  .blog main .note p {
+  .blog main .post p {
     font-size: 1.3rem;
   }
 }
@@ -445,16 +503,16 @@ body {
   .blog main {
     width: 90vw;
   }
-  .blog main .note {
+  .blog main .post {
     padding: 25px;
   }
-  .blog main .note .number-icon {
+  .blog main .post .number-icon {
     bottom: 10px;
   }
-  .blog main .note .note-title {
+  .blog main .post .post-title {
     font-size: 1.6rem;
   }
-  .blog main .note p {
+  .blog main .post p {
     font-size: 1.2rem;
   }
 }
@@ -476,7 +534,7 @@ body {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
   }
-  .blog main .note p {
+  .blog main .post p {
     font-size: 1.2rem;
   }
 }

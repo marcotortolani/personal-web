@@ -47,7 +47,8 @@ body {
 	height: 100%;
 }
 
-body {
+.home,
+.blog {
 	//font-size: 110%;
 	//color: #ecf0f1;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -56,6 +57,46 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
+
+
+    footer{
+        width: 100vw;
+        height: 60px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 20px;
+        //align-items: flex-start;
+    
+        //background-color: $colorBackTitle;
+        //background-color: $colorMagenta;
+        //background-color: $colorBackHome;
+        //background-color: $colorBack;
+        //background-color: #25d366;
+    
+        h6{
+            margin: 20px;
+            //font-family: $fontCredits;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+            font-size: 0.85rem;
+            //text-transform: uppercase;
+            text-transform: none;
+            letter-spacing: 1.5px;
+            //color: $colorMagenta;
+            color: $colorText;
+            a{
+                text-decoration: none;
+            }
+            span{
+                font-weight: 500;
+                color: aqua;
+                //color: $colorCyan;
+            }
+        }
+    }
 	
 }
 
@@ -239,52 +280,14 @@ body {
         // }
     }
 
-
-    footer{
-        width: 100vw;
-        height: 60px;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        bottom: 20px;
-        //align-items: flex-start;
-    
-        //background-color: $colorBackTitle;
-        //background-color: $colorMagenta;
-        //background-color: $colorBackHome;
-        //background-color: $colorBack;
-        //background-color: #25d366;
-    
-        h6{
-            margin: 20px;
-            //font-family: $fontCredits;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: 600;
-            font-size: 0.85rem;
-            //text-transform: uppercase;
-            text-transform: none;
-            letter-spacing: 1.5px;
-            //color: $colorMagenta;
-            //color: $colorText;
-            a{
-                text-decoration: none;
-            }
-            span{
-                font-weight: 500;
-                color: aqua;
-                //color: $colorCyan;
-            }
-        }
-    }
 }
 
 .blog{
 
+    overflow-x: hidden;
     overflow-y: auto;
     //width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -376,7 +379,7 @@ body {
             color: rgb(240, 240, 240);
         }
 
-        .note{
+        .post{
             z-index: 50;
             width: 100%;
             min-width: 250px;
@@ -402,16 +405,23 @@ body {
                 display: flex;
                 align-items: center;
 
-                .note-number{
-                
+                .post-number{
+                    width: 65px;
+                    min-width: fit-content;
+                    height: 40px;
+                    padding: 2px 10px;
                     font-family: 'Courier New', Courier, monospace;
                     font-size: 1.8rem;
                     font-weight: 900;
-                    
+                    border: 2px solid ;
                     color: rgb(240, 240, 240);
                     color: aqua;
                     color: rgb(206, 242, 74);
-                    
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
                 }
 
                 img{
@@ -422,7 +432,7 @@ body {
             }
             
 
-            .note-title{
+            .post-title{
                 width: 100%;
                 max-width: fit-content;
                 margin-left: 10px;
@@ -437,7 +447,7 @@ body {
                 //background-color: brown;
             
             }
-            .note-date-post{
+            .post-date-post{
                 margin: 10px;
 
                 color: rgb(240, 240, 240);
@@ -448,16 +458,75 @@ body {
 
             p{
                 width: 100%;
+
                 margin: 10px;
                 font-size: 1.5rem;
                 color: rgb(240, 240, 240);
             }
+
+            .button-more{
+                z-index: 100;
+                //width: 150px;
+                width: max-content;
+                height: 40px;
+                padding: 0 10px;
+                position: relative;
+                left: calc(50vw);
+                //bottom: -20px;
+                top: 10px;
+
+                font-family: Ubuntu;
+                font-size: 1.2rem;
+                font-weight: 500;
+
+                color: rgb(206, 242, 74);
+                background-color: #090a0f00;
+                border: 2px solid ;
+
+                &:hover{
+                    cursor: pointer;
+                    //background-color: rgb(119, 119, 119);
+                    background-color: #27394f;
+                }
+                &:active{
+                    transform: scale(0.95);
+                    -webkit-transform: scale(0.95);
+                    -moz-transform: scale(0.95);
+                    -ms-transform: scale(0.95);
+                    -o-transform: scale(0.95);
+}
+                
+            }
+            .button-more{
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+            }
+
             border-radius: 30px;
             -webkit-border-radius: 30px;
             -moz-border-radius: 30px;
             -ms-border-radius: 30px;
             -o-border-radius: 30px;
-}
+        }
+
+        .collapsed{
+            p{
+                display: none;
+            }
+        }
+
+        .hide{
+            display: none;
+        }
+    }
+
+    footer{
+        h6{
+            color: $colorText;
+        }
     }
 }
 
@@ -547,9 +616,9 @@ body {
     .blog{
         
         main{
-            .note{
+            .post{
 
-                .note-title{
+                .post-title{
                     font-size: 1.8rem;
                 }
                 p{
@@ -580,14 +649,14 @@ body {
         main{
             width: 90vw;
 
-            .note{
+            .post{
                 padding: 25px;
 
                 .number-icon{
                     bottom: 10px;
                 }
 
-                .note-title{
+                .post-title{
                     font-size: 1.6rem;
                 }
 
@@ -637,7 +706,7 @@ body {
         
         main{
 
-            .note{
+            .post{
                 
                 p{
                     font-size: 1.2rem;

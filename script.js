@@ -1,27 +1,198 @@
 const body = document.querySelector("body");
 
-console.log("inicio");
+let currentDate = new Date();
 
-const rrssIcons = document.querySelectorAll(".icon");
+let currentDay = currentDate.getDate();
+let currentMonth = currentDate.getMonth() + 1;
+let currentYear = currentDate.getFullYear();
 
 
-rrssIcons.forEach(el => {
-    //console.log("asigna eventos: ", el);
+if ( body.className === "home") {
+    console.log("inicio");
 
-    el.addEventListener("mouseover", e =>{
-        //console.log(e);
-        el.parentElement.parentElement.children[1].classList.remove("hide");
-        el.parentElement.parentElement.children[1].classList.add("show-tag");
+    const rrssIcons = document.querySelectorAll(".icon");
 
-        setTimeout(() => {  
-            el.parentElement.parentElement.children[1].classList.remove("show-tag");
-            el.parentElement.parentElement.children[1].classList.add("hide-tag");
 
-            setTimeout(() => {
-                el.parentElement.parentElement.children[1].classList.remove("hide-tag");
-                el.parentElement.parentElement.children[1].classList.add("hide");
-            }, 500);
+    rrssIcons.forEach(el => {
+        //console.log("asigna eventos: ", el);
 
-        }, 1500);
-    })
-});
+        el.addEventListener("mouseover", e =>{
+            //console.log(e);
+            el.parentElement.parentElement.children[1].classList.remove("hide");
+            el.parentElement.parentElement.children[1].classList.add("show-tag");
+
+            setTimeout(() => {  
+                el.parentElement.parentElement.children[1].classList.remove("show-tag");
+                el.parentElement.parentElement.children[1].classList.add("hide-tag");
+
+                setTimeout(() => {
+                    el.parentElement.parentElement.children[1].classList.remove("hide-tag");
+                    el.parentElement.parentElement.children[1].classList.add("hide");
+                }, 500);
+
+            }, 1500);
+        })
+    });
+}
+
+if (body.className === "blog"){
+
+
+    const postsBlog = document.getElementById("posts-blog");
+    const postTemplate = document.getElementById("post-template");
+    const idPost = document.getElementById("id-post");
+    const titlePost = document.getElementById("title-post");
+    const datePost = document.getElementById("date-post");
+    const dateSince = document.getElementById("date-since");
+    const paragraphsPost = document.getElementById("paragraphs-post");
+    const fragment = document.createDocumentFragment();
+
+    const buttonMore = document.querySelectorAll("button-more");
+
+    buttonMore.forEach(el => {
+        console.log(el);
+    });
+
+    const getBlogData = async () => {
+        
+        const blogData = await fetch("../content/blog/blog.json")
+            .then( res => {
+                console.log("Respuesta: ", res);
+                return res.json();
+            })
+            .catch( err => {
+                console.log("Error: ", err);
+            });
+
+        const blogDataJson = await blogData;
+
+        
+
+        renderBlogData(blogDataJson.blog);
+
+    }
+
+    document.addEventListener("DOMContentLoaded", getBlogData());
+
+    const renderBlogData = (blogData) => {
+        
+        //console.log(blogData);
+
+        let clonePost = document.importNode(postTemplate, true);
+
+        blogData.forEach(el => {
+            //console.log(el);
+
+
+            // id-post
+            console.log(clonePost.children[0].children[0].children[0].textContent);
+            // title-post
+            console.log(clonePost.children[1].textContent);
+            // date-post
+            console.log(clonePost.children[2].children[0].textContent);
+            // date-since
+            console.log(clonePost.children[2].children[1].textContent);
+            // paragraphs-post
+            console.log(clonePost.children[3].textContent);
+
+
+            el.id < 10 ? idPost.textContent = "00" + el.id : 
+            el.id < 100 ? idPost.textContent = "0" + el.id : 
+                         idPost.textContent = el.id;
+
+            titlePost.textContent = el.title;
+            datePost.textContent = el.date;
+
+            //console.log(dateSince.textContent);
+            dateSince.textContent = calculateBetweenDates (el.date);
+            
+            
+            if(el.paragraphs.length > 1){
+                let text = "";
+
+                for (let i = 0; i < el.paragraphs.length; i++) {                    
+                    if(i === el.paragraphs.length - 1){
+                        text = text + el.paragraphs[i];
+                    }else{
+                        text = text + el.paragraphs[i] + "<br><br>";
+                    }
+                }
+                    
+                paragraphsPost.innerHTML = text;
+            }else{
+                paragraphsPost.innerHTML = el.paragraphs;
+            };
+            
+
+            //postTemplate.dataset.id = "post" + "-" + el.id;
+            
+            postTemplate.classList.remove("hide");
+            fragment.appendChild(clonePost);
+            postTemplate.classList.add("hide");
+
+        });
+
+        postsBlog.appendChild(fragment);
+
+    }
+
+    const calculateBetweenDates = ( datePosted ) => {
+
+        let timePostedText = "";
+    
+        let dayPosted = datePosted.split("-")[0];
+        let monthPosted = datePosted.split("-")[1];
+        let yearPosted = datePosted.split("-")[2];
+
+        
+        if (currentYear > yearPosted) {
+            if ((currentYear - yearPosted) > 1) {
+                return `Posteado hace más de ${currentYear-yearPosted} años`;    
+            }else{
+                return `Posteado hace más de ${currentYear-yearPosted} año`;    
+            }
+        }
+        
+        if (currentMonth > monthPosted){
+            if ((currentMonth - monthPosted) > 1) {
+                return `Posteado hace más de ${currentMonth-monthPosted} meses`;    
+            }else{
+                return `Posteado hace más de ${currentMonth-monthPosted} mes`;    
+            }
+        }   
+
+        if (currentDay > dayPosted){
+            if ((currentDay - dayPosted) > 1) {
+                return `Posteado hace ${currentDay-dayPosted} días`;    
+            }else{
+                return `Posteado hace ${currentDay-dayPosted} día`;    
+            }
+        } 
+
+        if (currentDay = dayPosted){
+            return `Posteado hoy`;    
+        }
+
+    }
+
+
+    const collapseUnfoldPost = (e) => {
+
+
+        console.log("click botton");
+
+        // if (e.target.parentElement.classList.contains("collapsed")) {
+        //     e.target.parentElement.classList.remove("collapsed");
+        //     e.target.textContent = "Ver menos...";
+        // }else{
+        //     e.target.parentElement.classList.add("collapsed");
+        //     e.target.textContent = "Leer post";
+        // }
+    
+    }
+
+    buttonMore.forEach(el => {
+        el.addEventListener("click", e => collapseUnfoldPost(e));        
+    });
+
+}
