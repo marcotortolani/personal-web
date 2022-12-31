@@ -67,9 +67,9 @@ body {
         justify-content: center;
         align-items: center;
         position: absolute;
-        position: relative;
-        top: 20px;
-        //bottom: 20px;
+        //position: relative;
+        //top: 20px;
+        bottom: 20px;
         //align-items: flex-start;
     
         //background-color: $colorBackTitle;
@@ -567,7 +567,10 @@ body {
         }
     }
 
-    
+    footer{
+        position: relative;
+        top: 20px;
+    }
 }
 
 

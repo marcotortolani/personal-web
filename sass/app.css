@@ -79,8 +79,7 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  position: relative;
-  top: 20px;
+  bottom: 20px;
 }
 .home footer h6,
 .blog footer h6 {
@@ -445,6 +444,10 @@ body {
 .blog main .hide {
   display: none;
   height: 0px;
+}
+.blog footer {
+  position: relative;
+  top: 20px;
 }
 
 /* CSS hack using multiple box-shadows to get them **Stars** */
