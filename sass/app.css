@@ -407,7 +407,6 @@ body {
 .blog main .post .button-container {
   width: 100%;
   margin-top: 20px;
-  margin-bottom: -20px;
   display: flex;
   justify-content: end;
 }
