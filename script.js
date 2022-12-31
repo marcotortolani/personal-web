@@ -198,14 +198,13 @@ if (body.className === "blog"){
 
     const collapseUnfoldPost = (e) => {
 
-        if (e.target.parentElement.classList.contains("collapsed")) {
-            e.target.parentElement.classList.remove("collapsed");
+        if (e.target.parentElement.parentElement.classList.contains("collapsed")) {
+            e.target.parentElement.parentElement.classList.remove("collapsed");
             e.target.textContent = "Ver menos...";
         }else{
-            e.target.parentElement.classList.add("collapsed");
-            e.target.textContent = "Leer post";
+            e.target.parentElement.parentElement.classList.add("collapsed");
+            e.target.textContent = "Leer el post";
         }
-    
     }
 
 }

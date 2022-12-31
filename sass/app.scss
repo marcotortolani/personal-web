@@ -60,8 +60,9 @@ body {
 
 
     footer{
-        width: 95vw;
+        width: 100%;
         height: 60px;
+        padding-left: 10px;
         
         display: flex;
         justify-content: center;
@@ -77,6 +78,7 @@ body {
         //background-color: $colorBackHome;
         //background-color: $colorBack;
         //background-color: #25d366;
+        //background-color: gray;
     
         h6{
             margin: 20px;
@@ -303,7 +305,7 @@ body {
 
     header{
 
-        z-index: 100;
+        z-index: 200;
         width: 95vw;
 
         height: 50px;
@@ -507,53 +509,66 @@ body {
                 color: rgb(240, 240, 240);
             }
 
-            .button-more{
-                z-index: 100;
-                //width: 150px;
-                width: max-content;
-                height: 40px;
-                padding: 0 10px;
-                position: relative;
-                left: calc(45vw);
-                //bottom: -20px;
-                top: 10px;
+            .button-container{
+            
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: -20px;
 
-                font-family: Ubuntu;
-                font-size: 1.2rem;
-                font-weight: 500;
+                display: flex;
+                justify-content: end;
 
-                color: rgb(206, 242, 74);
-                background-color: #090a0f00;
-                border: 2px solid ;
-
-                &:hover{
-                    cursor: pointer;
-                    //background-color: rgb(119, 119, 119);
-                    background-color: #27394f;
+                .button-more{
+                    z-index: 100;
+                    //width: 150px;
+                    width: max-content;
+                    height: 40px;
+                    padding: 0 10px;
+                    position: relative;
+                    //left: calc(45vw);
+                    //right: 20px;
+                    //bottom: -20px;
+                    //top: 10px;
+    
+                    font-family: Ubuntu;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+    
+                    color: rgb(206, 242, 74);
+                    background-color: #090a0f00;
+                    border: 2px solid ;
+    
+                    &:hover{
+                        cursor: pointer;
+                        
+                    }
+                    &:active{
+                        transform: scale(0.95);
+                        -webkit-transform: scale(0.95);
+                        -moz-transform: scale(0.95);
+                        -ms-transform: scale(0.95);
+                        -o-transform: scale(0.95);
+                    }
+                    
                 }
-                &:active{
-                    transform: scale(0.95);
-                    -webkit-transform: scale(0.95);
-                    -moz-transform: scale(0.95);
-                    -ms-transform: scale(0.95);
-                    -o-transform: scale(0.95);
+                .button-more{
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
                 }
+    
                 
-            }
-            .button-more{
-                border-radius: 10px;
-                -webkit-border-radius: 10px;
-                -moz-border-radius: 10px;
-                -ms-border-radius: 10px;
-                -o-border-radius: 10px;
             }
 
             border-radius: 30px;
-            -webkit-border-radius: 30px;
-            -moz-border-radius: 30px;
-            -ms-border-radius: 30px;
-            -o-border-radius: 30px;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                -ms-border-radius: 30px;
+                -o-border-radius: 30px;
         }
+            
 
         .collapsed{
             p{
