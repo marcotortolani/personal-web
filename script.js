@@ -40,18 +40,20 @@ if (body.className === "blog"){
 
     const postsBlog = document.getElementById("posts-blog");
     const postTemplate = document.getElementById("post-template");
-    const idPost = document.getElementById("id-post");
-    const titlePost = document.getElementById("title-post");
-    const datePost = document.getElementById("date-post");
-    const dateSince = document.getElementById("date-since");
-    const paragraphsPost = document.getElementById("paragraphs-post");
     const fragment = document.createDocumentFragment();
 
-    const buttonMore = document.querySelectorAll("button-more");
+    //const buttonMore01 = document.getElementById("button-more-1");
+    
 
-    buttonMore.forEach(el => {
-        console.log(el);
-    });
+
+    // buttonMore.forEach(el => {
+    //     console.log(el);
+    // });
+
+    
+
+
+    
 
     const getBlogData = async () => {
         
@@ -78,35 +80,49 @@ if (body.className === "blog"){
         
         //console.log(blogData);
 
-        let clonePost = document.importNode(postTemplate, true);
+        // let clonePost = document.importNode(postTemplate, true);
+
+        // let idPostClon = clonePost.children[0].children[0].children[0];
+        // let titlePostClon = clonePost.children[1];
+        // let datePostClon = clonePost.children[2].children[0];
+        // let dateSinceClon = clonePost.children[2].children[1];
+        // let paragraphsPostClon = clonePost.children[3];
+
+
 
         blogData.forEach(el => {
-            //console.log(el);
-
-
-            // id-post
-            console.log(clonePost.children[0].children[0].children[0].textContent);
-            // title-post
-            console.log(clonePost.children[1].textContent);
-            // date-post
-            console.log(clonePost.children[2].children[0].textContent);
-            // date-since
-            console.log(clonePost.children[2].children[1].textContent);
-            // paragraphs-post
-            console.log(clonePost.children[3].textContent);
-
-
-            el.id < 10 ? idPost.textContent = "00" + el.id : 
-            el.id < 100 ? idPost.textContent = "0" + el.id : 
-                         idPost.textContent = el.id;
-
-            titlePost.textContent = el.title;
-            datePost.textContent = el.date;
-
-            //console.log(dateSince.textContent);
-            dateSince.textContent = calculateBetweenDates (el.date);
             
+            let clonePost = document.importNode(postTemplate, true);
+
+            let idPostClon = clonePost.children[0].children[0].children[0];
+            let titlePostClon = clonePost.children[1];
+            let datePostClon = clonePost.children[2].children[0];
+            let dateSinceClon = clonePost.children[2].children[1];
+            let paragraphsPostClon = clonePost.children[3];
+            let buttonMorePostClon = clonePost.children[4];
+
             
+
+            // // id-post
+            // console.log(clonePost.children[0].children[0].children[0].textContent);            
+            // // title-post
+            // console.log(clonePost.children[1].textContent);
+            // // date-post
+            // console.log(clonePost.children[2].children[0].textContent);
+            // // date-since
+            // console.log(clonePost.children[2].children[1].textContent);
+            // // paragraphs-post
+            // console.log(clonePost.children[3].textContent);
+
+
+            el.id < 10 ? idPostClon.textContent = "00" + el.id : 
+            el.id < 100 ? idPostClon.textContent = "0" + el.id : 
+                         idPostClon.textContent = el.id;
+
+            titlePostClon.textContent = el.title;
+            datePostClon.textContent = el.date;
+            dateSinceClon.textContent = calculateBetweenDates (el.date);
+        
             if(el.paragraphs.length > 1){
                 let text = "";
 
@@ -118,17 +134,21 @@ if (body.className === "blog"){
                     }
                 }
                     
-                paragraphsPost.innerHTML = text;
+                paragraphsPostClon.innerHTML = text;
             }else{
-                paragraphsPost.innerHTML = el.paragraphs;
+                paragraphsPostClon.innerHTML = el.paragraphs;
             };
+
+            clonePost.id = "post" + "-" + el.id;
+            buttonMorePostClon.id = buttonMorePostClon.id + "-" + el.id; 
+            buttonMorePostClon.classList.add("button-more-text");
+
+            buttonMorePostClon.addEventListener("click", e => collapseUnfoldPost(e));
             
 
-            //postTemplate.dataset.id = "post" + "-" + el.id;
-            
-            postTemplate.classList.remove("hide");
+            clonePost.classList.remove("hide");
             fragment.appendChild(clonePost);
-            postTemplate.classList.add("hide");
+            //postTemplate.classList.add("hide");
 
         });
 
@@ -178,21 +198,14 @@ if (body.className === "blog"){
 
     const collapseUnfoldPost = (e) => {
 
-
-        console.log("click botton");
-
-        // if (e.target.parentElement.classList.contains("collapsed")) {
-        //     e.target.parentElement.classList.remove("collapsed");
-        //     e.target.textContent = "Ver menos...";
-        // }else{
-        //     e.target.parentElement.classList.add("collapsed");
-        //     e.target.textContent = "Leer post";
-        // }
+        if (e.target.parentElement.classList.contains("collapsed")) {
+            e.target.parentElement.classList.remove("collapsed");
+            e.target.textContent = "Ver menos...";
+        }else{
+            e.target.parentElement.classList.add("collapsed");
+            e.target.textContent = "Leer post";
+        }
     
     }
-
-    buttonMore.forEach(el => {
-        el.addEventListener("click", e => collapseUnfoldPost(e));        
-    });
 
 }

@@ -1,46 +1,7 @@
 {
     "blog": 
         [
-            {
-                "id": 4,
-                "title": "Título del post numero 4",
-                "date": "28-12-2022",
-                "paragraphs": 
-                    [
-                        "Parrafo numero 1 para colocar lo que quieras poner, esto puede seguir y seguir y seguir y seguir.",
-                        "Párrafo número 2 para colocar otra idea mas desarrollada en profundidad.",
-                        "Y acá otro párrafo más, para seguir ahondando en la problemática y llegar al meollo de la cuestión.",
-                        "En este otro párrafo se puede comenzar a dar luz sobre el asunto.",
-                        "Y en este otro párrafo se puede desatar el nudo generado en el medio.",
-                        "Acá puede haber un desenlace y alguna resolución o consejo, o data puntual."
-                    ]     
-            },
-            {
-                "id": 3,
-                "title": "Título del post numero 3",
-                "date": "05-12-2022",
-                "paragraphs": 
-                    [
-                        "Parrafo numero 1 para colocar lo que quieras poner, esto puede seguir y seguir y seguir y seguir.",
-                        "Párrafo número 2 para colocar otra idea mas desarrollada en profundidad.",
-                        "Y acá otro párrafo más, para seguir ahondando en la problemática y llegar al meollo de la cuestión.",
-                        "En este otro párrafo se puede comenzar a dar luz sobre el asunto.",
-                        "Y en este otro párrafo se puede desatar el nudo generado en el medio.",
-                        "Acá puede haber un desenlace y alguna resolución o consejo, o data puntual."
-                    ]     
-            },
-            {
-                "id": 2,
-                "title": "Título del post numero 2",
-                "date": "30-06-2022",
-                "paragraphs": 
-                    [
-                        "ID: 2. Parrafo numero 1 para colocar lo que quieras poner, esto puede seguir y seguir y seguir y seguir."
-                        
-                        
-                        
-                    ]     
-            },
+           
             {
                 "id": 1,
                 "title": "Aprender es desafiarse a superar la frustración",

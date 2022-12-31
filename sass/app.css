@@ -73,13 +73,14 @@ body {
 }
 .home footer,
 .blog footer {
-  width: 100vw;
+  width: 95vw;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 20px;
+  position: relative;
+  top: 20px;
 }
 .home footer h6,
 .blog footer h6 {
@@ -89,6 +90,7 @@ body {
   font-size: 0.85rem;
   text-transform: none;
   letter-spacing: 1.5px;
+  color: #fff;
 }
 .home footer h6 a,
 .blog footer h6 a {
@@ -230,7 +232,10 @@ body {
 
 .blog {
   overflow-y: auto;
-  min-height: 100vh;
+  height: 100vh;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -278,6 +283,34 @@ body {
   position: absolute;
   left: 0;
 }
+.blog .boton {
+  z-index: 100;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 40px;
+  padding: 0 10px;
+  position: absolute;
+  top: 20px;
+  top: 10px;
+  font-family: Ubuntu;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(206, 242, 74);
+  background-color: rgba(9, 10, 15, 0);
+  border: 2px solid;
+}
+.blog .boton:hover {
+  cursor: pointer;
+  background-color: #27394f;
+}
+.blog .boton:active {
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+}
 .blog main {
   width: 70vw;
   display: flex;
@@ -287,7 +320,8 @@ body {
 .blog main .blog-title {
   width: 100%;
   max-width: 600px;
-  margin: 50px;
+  margin-top: 100px;
+  margin-bottom: 50px;
   font-family: Ubuntu;
   font-size: 4em;
   text-align: center;
@@ -366,6 +400,7 @@ body {
 .blog main .post p {
   width: 100%;
   margin: 10px;
+  padding-right: 10px;
   font-size: 1.5rem;
   color: rgb(240, 240, 240);
 }
@@ -377,7 +412,7 @@ body {
   height: 40px;
   padding: 0 10px;
   position: relative;
-  left: 50vw;
+  left: 45vw;
   top: 10px;
   font-family: Ubuntu;
   font-size: 1.2rem;
@@ -409,6 +444,7 @@ body {
 }
 .blog main .hide {
   display: none;
+  height: 0px;
 }
 
 /* CSS hack using multiple box-shadows to get them **Stars** */

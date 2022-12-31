@@ -60,14 +60,16 @@ body {
 
 
     footer{
-        width: 100vw;
+        width: 95vw;
         height: 60px;
         
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
-        bottom: 20px;
+        position: relative;
+        top: 20px;
+        //bottom: 20px;
         //align-items: flex-start;
     
         //background-color: $colorBackTitle;
@@ -86,7 +88,7 @@ body {
             text-transform: none;
             letter-spacing: 1.5px;
             //color: $colorMagenta;
-            color: $colorText;
+            color: #fff;
             a{
                 text-decoration: none;
             }
@@ -284,10 +286,12 @@ body {
 
 .blog{
 
-    overflow-x: hidden;
+    //overflow-x: hidden;
     overflow-y: auto;
     //width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
+    //min-height: 100vh;
+    max-height: fit-content;
 
     display: flex;
     flex-direction: column;
@@ -352,13 +356,49 @@ body {
     }
 
     .stars-background{
-        //display: none;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
         position: absolute;
         left: 0;
     }
+
+
+    .boton{
+        z-index: 100;
+        //width: 150px;
+        width: max-content;
+        height: 40px;
+        padding: 0 10px;
+        position: absolute;
+        top: 20px;
+        //left: calc(50vw);
+        //bottom: -20px;
+        top: 10px;
+
+        font-family: Ubuntu;
+        font-size: 1.2rem;
+        font-weight: 500;
+
+        color: rgb(206, 242, 74);
+        background-color: #090a0f00;
+        border: 2px solid ;
+
+        &:hover{
+            cursor: pointer;
+            //background-color: rgb(119, 119, 119);
+            background-color: #27394f;
+        }
+        &:active{
+            transform: scale(0.95);
+            -webkit-transform: scale(0.95);
+            -moz-transform: scale(0.95);
+            -ms-transform: scale(0.95);
+            -o-transform: scale(0.95);
+        }
+        
+    }
+
+
+
+
     main{
         
         width: 70vw;
@@ -370,7 +410,9 @@ body {
         .blog-title{
             width: 100%;
             max-width: 600px;
-            margin: 50px;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            
 
             font-family: Ubuntu;
             font-size: 4em;
@@ -460,6 +502,7 @@ body {
                 width: 100%;
 
                 margin: 10px;
+                padding-right: 10px;
                 font-size: 1.5rem;
                 color: rgb(240, 240, 240);
             }
@@ -471,7 +514,7 @@ body {
                 height: 40px;
                 padding: 0 10px;
                 position: relative;
-                left: calc(50vw);
+                left: calc(45vw);
                 //bottom: -20px;
                 top: 10px;
 
@@ -494,7 +537,7 @@ body {
                     -moz-transform: scale(0.95);
                     -ms-transform: scale(0.95);
                     -o-transform: scale(0.95);
-}
+                }
                 
             }
             .button-more{
@@ -520,14 +563,11 @@ body {
 
         .hide{
             display: none;
+            height: 0px;
         }
     }
 
-    footer{
-        h6{
-            color: $colorText;
-        }
-    }
+    
 }
 
 
