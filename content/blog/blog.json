@@ -1,21 +1,7 @@
 {
     "blog": 
         [
-           
-            {
-                "id": 1,
-                "title": "Aprender es desafiarse a superar la frustración",
-                "date": "27-12-2022",
-                "paragraphs": 
-                    [
-                        "Algo que me está sucediendo mucho al ser programador es pasar el ciclo de aprendizaje de forma mucho más periódica. Pongo contexto, antes de decidir meterme en el mundo developer estaba haciendo la carrera de Diseño Industrial, y como en todo estudio académico hay un plan de estudios donde los procesos de aprendizaje son más amplios y también con un ritmo más lento, esto no es que esté bien o mal, simplemente es así, en una carrera para formar a un profesional es necesario abarcar muchos temas y eso lleva tiempo. En cambio, al entrar en el desarrollo Front End empecé a aprender un primer lenguaje (HTML) y luego otro (CSS), poniéndolos en práctica casi al unísono para empezar a maquetar unas primeras páginas de aprendizaje, y al poco tiempo ya aprendiendo un lenguaje de programación (JavaScript) para hacer desarrollos más dinámicos y modernos, y después otra herramienta, y así constantemente mejorando.",
-                        "Todo ciclo de aprendizaje (sea del tema que sea) tiene etapas, y una muy importante es la frustración, puede que la superes fácil, que te resulte difícil o que no la superes en absoluto y desistas, pero la frustración siempre está presente en el aprendizaje, porque aprender es hacer propio algo que desconocemos, algo que no entendemos en su totalidad pero que deseamos comprender y dominar, y cuando no podemos entenderlo eso nos puede frustrar, pero la diferencia radica absolutamente en una sola cosa, la actitud, el deseo interno de sobreponerse, superarlo y buscar la forma de aprender eso que se desea.",
-                        "Aprender es desafiarse a uno mismo a lograr superar esa frustración, el aprendizaje se encuentra del otro lado del muro de la frustración, el aprendizaje es la iluminación de tu corteza cerebral cuando hizo todas las conexiones necesarias para que puedas decir “Eureka!!!”. En este ámbito de la programación es muy común la necesidad de ser habidos en aprender nuevas tecnologías y herramientas, todo avanza, todo evoluciona y se transforma, y por esto estamos en constante proceso en el ciclo de aprendizaje y superando la frustración que cada vez se hace más fácil de superar, es como un entrenamiento.",
-                        "En mi caso lo que me motiva fuertemente por aprender una nueva herramienta son las habilidades que luego voy a poder volcar en pos de mejorar mi desarrollo, en mejorar la calidad de lo que hago para una persona que va a usar ese producto final y que tenga una mejor experiencia de usuario. Esa motivación me lleva a seguir enfrentando ese muro de frustración, haciéndolo cada vez más pequeño y más fácil de superar, es el desafío constante de empujar los límites del conocimiento.",
-                        "Es normal frustrarse, chocarse con una pared y ver cómo son las cosas realmente, pero lo importante no pasa por ahí, lo importante es lograr superar ese momento y avanzar.",
-                        "Por eso si estás pensando en desistir, no lo decidas aún, tomate un respiro, cambiá el aire, dale un descanso a tu cabeza haciendo una actividad totalmente distinta, tomá distancia del problema, y luego volvé, y pensá en CÓMO PODÉS SUPERARLO. Con el tiempo te va a ir resultando más fácil."
-                    ]     
-            },
+            
             {
                 "id": 2,
                 "title": "La filosofía del diseño web moderno (Escrito por una IA)",
@@ -29,6 +15,20 @@
                         "4- Por último, El Diseño: Se refiere a la manera en que un sitio web se ve y se siente. Esto incluye la elección de una paleta de colores adecuada, la selección de fuentes atractivas y la creación de elementos gráficos que sean apropiados para el contenido.",
                         "El objetivo final del desarrollo web moderno es crear una experiencia de usuario única e intuitiva, que sea fácil de navegar, accesible para todas las personas y ofrezca contenido relevante para el usuario. Esta filosofía se puede aplicar a cualquier tipo de sitio web, desde sitios comerciales hasta sitios educativos. Si se sigue esta filosofía, los sitios web se verán bien, se sentirán bien y se adaptarán a los usuarios de la mejor manera posible."
                     ]
+            },
+            {
+                "id": 1,
+                "title": "Aprender es desafiarse a superar la frustración",
+                "date": "27-12-2022",
+                "paragraphs": 
+                    [
+                        "Algo que me está sucediendo mucho al ser programador es pasar el ciclo de aprendizaje de forma mucho más periódica. Pongo contexto, antes de decidir meterme en el mundo developer estaba haciendo la carrera de Diseño Industrial, y como en todo estudio académico hay un plan de estudios donde los procesos de aprendizaje son más amplios y también con un ritmo más lento, esto no es que esté bien o mal, simplemente es así, en una carrera para formar a un profesional es necesario abarcar muchos temas y eso lleva tiempo. En cambio, al entrar en el desarrollo Front End empecé a aprender un primer lenguaje (HTML) y luego otro (CSS), poniéndolos en práctica casi al unísono para empezar a maquetar unas primeras páginas de aprendizaje, y al poco tiempo ya aprendiendo un lenguaje de programación (JavaScript) para hacer desarrollos más dinámicos y modernos, y después otra herramienta, y así constantemente mejorando.",
+                        "Todo ciclo de aprendizaje (sea del tema que sea) tiene etapas, y una muy importante es la frustración, puede que la superes fácil, que te resulte difícil o que no la superes en absoluto y desistas, pero la frustración siempre está presente en el aprendizaje, porque aprender es hacer propio algo que desconocemos, algo que no entendemos en su totalidad pero que deseamos comprender y dominar, y cuando no podemos entenderlo eso nos puede frustrar, pero la diferencia radica absolutamente en una sola cosa, la actitud, el deseo interno de sobreponerse, superarlo y buscar la forma de aprender eso que se desea.",
+                        "Aprender es desafiarse a uno mismo a lograr superar esa frustración, el aprendizaje se encuentra del otro lado del muro de la frustración, el aprendizaje es la iluminación de tu corteza cerebral cuando hizo todas las conexiones necesarias para que puedas decir “Eureka!!!”. En este ámbito de la programación es muy común la necesidad de ser habidos en aprender nuevas tecnologías y herramientas, todo avanza, todo evoluciona y se transforma, y por esto estamos en constante proceso en el ciclo de aprendizaje y superando la frustración que cada vez se hace más fácil de superar, es como un entrenamiento.",
+                        "En mi caso lo que me motiva fuertemente por aprender una nueva herramienta son las habilidades que luego voy a poder volcar en pos de mejorar mi desarrollo, en mejorar la calidad de lo que hago para una persona que va a usar ese producto final y que tenga una mejor experiencia de usuario. Esa motivación me lleva a seguir enfrentando ese muro de frustración, haciéndolo cada vez más pequeño y más fácil de superar, es el desafío constante de empujar los límites del conocimiento.",
+                        "Es normal frustrarse, chocarse con una pared y ver cómo son las cosas realmente, pero lo importante no pasa por ahí, lo importante es lograr superar ese momento y avanzar.",
+                        "Por eso si estás pensando en desistir, no lo decidas aún, tomate un respiro, cambiá el aire, dale un descanso a tu cabeza haciendo una actividad totalmente distinta, tomá distancia del problema, y luego volvé, y pensá en CÓMO PODÉS SUPERARLO. Con el tiempo te va a ir resultando más fácil."
+                    ]     
             }
             
         
