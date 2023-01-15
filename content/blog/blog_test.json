@@ -18,7 +18,7 @@
             {
                 "id": 3,
                 "title": "Título del post numero 3",
-                "date": "05-12-2022",
+                "date": "05-08-2022",
                 "paragraphs": 
                     [
                         "Parrafo numero 1 para colocar lo que quieras poner, esto puede seguir y seguir y seguir y seguir.",
@@ -32,7 +32,7 @@
             {
                 "id": 2,
                 "title": "Título del post numero 2",
-                "date": "30-06-2022",
+                "date": "30-01-2022",
                 "paragraphs": 
                     [
                         "ID: 2. Parrafo numero 1 para colocar lo que quieras poner, esto puede seguir y seguir y seguir y seguir."
@@ -44,7 +44,7 @@
             {
                 "id": 1,
                 "title": "Aprender es desafiarse a superar la frustración",
-                "date": "27-12-2022",
+                "date": "27-03-2021",
                 "paragraphs": 
                     [
                         "Algo que me está sucediendo mucho al ser programador es pasar el ciclo de aprendizaje de forma mucho más periódica. Pongo contexto, antes de decidir meterme en el mundo developer estaba haciendo la carrera de Diseño Industrial, y como en todo estudio académico hay un plan de estudios donde los procesos de aprendizaje son más amplios y también con un ritmo más lento, esto no es que esté bien o mal, simplemente es así, en una carrera para formar a un profesional es necesario abarcar muchos temas y eso lleva tiempo. En cambio, al entrar en el desarrollo Front End empecé a aprender un primer lenguaje (HTML) y luego otro (CSS), poniéndolos en práctica casi al unísono para empezar a maquetar unas primeras páginas de aprendizaje, y al poco tiempo ya aprendiendo un lenguaje de programación (JavaScript) para hacer desarrollos más dinámicos y modernos, y después otra herramienta, y así constantemente mejorando.",

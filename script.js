@@ -6,7 +6,7 @@ let currentDay = currentDate.getDate();
 let currentMonth = currentDate.getMonth() + 1;
 let currentYear = currentDate.getFullYear();
 
-
+//! ----  HOME PAGE  ----
 if ( body.className === "home") {
     console.log("inicio");
 
@@ -35,6 +35,8 @@ if ( body.className === "home") {
     });
 }
 
+
+//! ----  BLOG  ----
 if (body.className === "blog"){
 
 
@@ -164,34 +166,98 @@ if (body.className === "blog"){
         let monthPosted = datePosted.split("-")[1];
         let yearPosted = datePosted.split("-")[2];
 
+        let datePost = new Date(yearPosted,monthPosted-1,dayPosted);
+        //let datePost = (new Date(datePosted.replaceAll("-", "/"))).getTime();
+        //let datePost = Date.parse("27/12/2022");
+        //console.log(datePosted.replaceAll("-", "/"));
+
+        //console.log("diference between dates: ");
+        //console.log(datePost.getTime());
+        //console.log(currentDate.getTime());
+        //console.log("--------");
+
+        const diffTime = Math.abs(currentDate.getTime() - datePost.getTime());
+        //console.log("diffTime: ", diffTime);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) - 1; 
+        //console.log(diffDays + " days");
+
         
-        if (currentYear > yearPosted) {
-            if ((currentYear - yearPosted) > 1) {
-                return `Posteado hace más de ${currentYear-yearPosted} años`;    
-            }else{
-                return `Posteado hace más de ${currentYear-yearPosted} año`;    
+        console.log("redondeo");
+        console.log(Math.round(diffDays/365));
+
+        console.log("diferencia de dias");
+        console.log(diffDays);
+
+        if(diffDays >= 365){
+
+            console.log("entrando en años");
+            console.log(Math.round(diffDays/365));
+
+            if(Math.round(diffDays/365) >= 1 && Math.round(diffDays/365) < 2){
+                return `Posteado hace más de ${Math.round(diffDays/365)} año`;
+            }
+
+            if(Math.round(diffDays/365) >= 2){
+                return `Posteado hace más de ${Math.round(diffDays/365)} años`;
+            }
+
+        }else {
+            if(diffDays >= 30 && diffDays < 61 ){
+                return `Posteado hace más de 1 mes`;
+            }
+            if(diffDays >= 61 && diffDays < 365){
+                if(Math.round(diffDays/30) > 11){
+                    return `Posteado hace más de 1 año`;
+                }else {
+                    return `Posteado hace más de ${Math.round(diffDays/30)} meses`;
+                }
+                
+            }
+    
+            if(diffDays === 0){
+                return `Posteado hoy`;
+            }
+            if(diffDays === 1){
+                return `Posteado ayer`;
+            }
+            if(diffDays > 1 && diffDays < 30){
+                return `Posteado hace ${diffDays} días`;
             }
         }
+
         
-        if (currentMonth > monthPosted){
-            if ((currentMonth - monthPosted) > 1) {
-                return `Posteado hace más de ${currentMonth-monthPosted} meses`;    
-            }else{
-                return `Posteado hace más de ${currentMonth-monthPosted} mes`;    
-            }
-        }   
 
-        if (currentDay > dayPosted){
-            if ((currentDay - dayPosted) > 1) {
-                return `Posteado hace ${currentDay-dayPosted} días`;    
-            }else{
-                return `Posteado hace ${currentDay-dayPosted} día`;    
-            }
-        } 
 
-        if (currentDay = dayPosted){
-            return `Posteado hoy`;    
-        }
+
+
+
+    //     if (currentYear > yearPosted) {
+    //         if ((currentYear - yearPosted) > 1) {
+    //             return `Posteado hace más de ${currentYear-yearPosted} años`;    
+    //         }else{
+    //             return `Posteado hace más de ${currentYear-yearPosted} año`;    
+    //         }
+    //     }
+        
+    //     if (currentMonth > monthPosted){
+    //         if ((currentMonth - monthPosted) > 1) {
+    //             return `Posteado hace más de ${currentMonth-monthPosted} meses`;    
+    //         }else{
+    //             return `Posteado hace más de ${currentMonth-monthPosted} mes`;    
+    //         }
+    //     }   
+
+    //     if (currentDay > dayPosted){
+    //         if ((currentDay - dayPosted) > 1) {
+    //             return `Posteado hace ${currentDay-dayPosted} días`;    
+    //         }else{
+    //             return `Posteado hace ${currentDay-dayPosted} día`;    
+    //         }
+    //     } 
+
+    //     if (currentDay = dayPosted){
+    //         return `Posteado hoy`;    
+    //     }
 
     }
 
